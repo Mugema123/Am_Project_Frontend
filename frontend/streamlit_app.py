@@ -72,7 +72,7 @@ if submitted:
         response = requests.post(
             "https://flight-delay-api-4kxq.onrender.com/predict",
             json=payload,
-            timeout=20
+            timeout=300
         )
 
         if response.status_code == 200:
@@ -118,7 +118,7 @@ if user_query:
             chat_response = requests.post(
                 "https://flight-delay-api-4kxq.onrender.com/chat",
                 json=chat_payload,
-                timeout=20
+                timeout=300
             )
 
             if chat_response.status_code == 200:
